@@ -22,7 +22,19 @@ public class Main {
         } else {
             System.out.println("I cannot afford the phone.");
         }
+
         money -= phonePrice; // Deducting phone price from money
         System.out.println("After buying the phone, I have " + money + " left.");
+        int day = 3; // Let's say it's Wednesday
+        switch(day) {
+            case 1 -> System.out.println("It's Monday.");
+            case 2 -> System.out.println("It's Tuesday.");
+            case 3 -> System.out.println("It's Wednesday.");
+            case 4 -> System.out.println("It's Thursday.");
+            case 5 -> System.out.println("It's Friday.");
+            case 6 -> System.out.println("It's Saturday.");
+            case 7 -> System.out.println("It's Sunday.");
+            default -> System.out.println("Invalid day.");
+        }
     }
 }
