@@ -15,6 +15,7 @@ public class Main {
         Chapter6.run(); // Objects
         Chapter7.run(); // Inheritance
         Chapter8.run(); // Enum
+        Chapter9.run(); // Arraylist
         
         Console.success("All chapters completed successfully!");
     }
