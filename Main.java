@@ -1,149 +1,20 @@
 public class Main {
 
     public static void main(String[] args) {
-        // Chapter 0: Introduction
-        System.out.println("=== Chapter 0: Introduction ===");
-        System.out.println("Hello, World! This is a Java program.");
-        System.out.println();
-
-        // Chapter 1: Variables and Data Types
-        System.out.println("=== Chapter 1: Variables and Data Types ===");
-        byte myAge = 25;
-        int myAgeInMonths = 25 * 12;
-        String myName = "John Doe";
-        System.out.println("My name is " + myName + " and I am " + myAge + " years old. In months, that's "
-                + myAgeInMonths + " months.");
-        myAge += 5; // Incrementing age by 5 years
-        System.out.println("After 5 years, I will be " + myAge);
-        System.out.println();
-
-        // Chatper 2 : Conditional Statements
-        System.out.println("=== Chapter 2: Conditional Statements ===");
-        int money = 2000;
-        int phonePrice = 1500;
-        if (money >= phonePrice) {
-            System.out.println("I can buy the phone.");
-        } else {
-            System.out.println("I cannot afford the phone.");
-        }
-
-        money -= phonePrice; // Deducting phone price from money
-        System.out.println("After buying the phone, I have " + money + " left.");
-        int day = 3; // Let's say it's Wednesday
-        switch (day) {
-            case 1 -> System.out.println("It's Monday.");
-            case 2 -> System.out.println("It's Tuesday.");
-            case 3 -> System.out.println("It's Wednesday.");
-            case 4 -> System.out.println("It's Thursday.");
-            case 5 -> System.out.println("It's Friday.");
-            case 6 -> System.out.println("It's Saturday.");
-            case 7 -> System.out.println("It's Sunday.");
-            default -> System.out.println("Invalid day.");
-        }
-        System.out.println();
-
-        // Chapter 3: Arrays
-        System.out.println("=== Chapter 3: Arrays ===");
-        String[] names = { "Alice", "Bob", "Charlie" };
-        System.out.println(names[0]); // Expecting "Alice"
-        names[1] = "David"; // Changing Bob to David
-
-        int[] notes = { 85, 90, 78, 92 };
-        int averageNote = (notes[0] + notes[1] + notes[2] + notes[3]) / notes.length;
-        System.out.println("The average note is: " + averageNote);
-
-        int[][] studentsNotes = {
-                { 52, 85, 90 },
-                { 68, 78, 92 },
-                { 79, 88, 84 }
-        };
-        System.out.println("Student 1's first note: " + studentsNotes[0][0]);
-        System.out.println("Student 2's first note: " + studentsNotes[1][0]);
-        System.out.println("Student 3's first note: " + studentsNotes[2][0]);
-
-        String userNames = "user123,user456,user789";
-        String[] userNamesArray = userNames.split(",");
-        System.out.println(userNamesArray[0]); // Expecting "user123"
-        System.out.println(userNamesArray[1]); // Expecting "user456"
-        System.out.println();
-
-        // Chapter 4: Loops
-        System.out.println("=== Chapter 4: Loops ===");
-        for (int i = 0; i < 5; i++) { // Simple for loop
-            System.out.println("Loop iteration: " + i);
-        }
-
-        String[] fruits = { "Apple", "Banana", "Cherry" };
-        for (String fruit : fruits) { // Enhanced for loop
-            System.out.println("Fruit: " + fruit);
-        }
-        int[] numbers = { 1, 2, 3, 4, 5 };
-        int sum = 0;
-        for (int number : numbers) { // for loop with sum
-            sum += number;
-        }
-        System.out.println("Sum of numbers: " + sum);
-
-        int userAge = 10;
-        while (userAge < 18) { // While loop
-            System.out.println("User is under 18, current age: " + userAge);
-            userAge++;
-        }
-
-        do {
-            System.out.println("User is still under 21 he can't drink alcohol, \ncurrent age: " + userAge);
-            userAge++;
-        } while (userAge < 21); // Do-while loop
-        System.out.println();
-
-        // Chapter 5: Functions
-        System.out.println("=== Chapter 5: Functions ===");
-        int result = Math.add(5, 10); // Using the add function from Math class
-        System.out.println("Sum of 5 and 10 is: " + result);
-        // debug testing
-        Console.log("Operation successful");
-        Console.error("An error has occurred");
-        Console.warn("Be careful with this parameter");
-        Console.info("General information");
-        Console.success("Processing completed successfully");
-
-        int[] numbersArray = { 1, 2, 3, 4, 5 };
-        int sumOfArray = Math.sumArray(numbersArray); // Using the sumArray function from Math class
-        Console.info("Sum of array: " + sumOfArray);
-
-        // Chapter 6: Objects
-        System.out.println("=== Chapter 6: Objects ===");
+        Console.info("=== Java Learning Program ===");
+        Console.success("Starting all chapters...");
+        Console.info("");
         
-        Player player1 = new Player("Player 1", 100.0, 20.0);
-        Console.info(player1.getName() + " stats:"
-                + "\nHealth: " + player1.getHealth()
-                + "\nAttack Power: " + player1.getAttackPower());
-
-        Player player2 = new Player("Player 2", 120.0, 25.0);
-        Console.info(player2.getName() + " stats:"
-                + "\nHealth: " + player2.getHealth()
-                + "\nAttack Power: " + player2.getAttackPower());
-        Console.info("Both players are ready for battle!");
-        // Simulating a battle
-        while (player1.getHealth() > 0 && player2.getHealth() > 0) {
-            Console.info(player1.getName() + " attacks " + player2.getName());
-            player2.setHealth(player2.getHealth() - player1.getAttackPower());
-            Console.info(player2.getName() + " health: " + player2.getHealth());
-
-            if (player2.getHealth() <= 0) {
-                Console.success(player2.getName() + " has been defeated!");
-                break;
-            }
-
-            Console.info(player2.getName() + " attacks " + player1.getName());
-            player1.setHealth(player1.getHealth() - player2.getAttackPower());
-            Console.info(player1.getName() + " health: " + player1.getHealth());
-
-            if (player1.getHealth() <= 0) {
-                Console.success(player1.getName() + " has been defeated!");
-                break;
-            }
-        }
+        // Run all chapters in sequence
+        Chapter0.run();
+        Chapter1.run();
+        Chapter2.run();
+        Chapter3.run();
+        Chapter4.run();
+        Chapter5.run();
+        Chapter6.run();
+        
+        Console.success("All chapters completed successfully!");
     }
 
 }
