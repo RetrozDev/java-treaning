@@ -66,5 +66,34 @@ public class Main {
         System.out.println(userNamesArray[0]); // Expecting "user123"
         System.out.println(userNamesArray[1]); // Expecting "user456"
         System.out.println();
+
+        // Chapter 4: Loops
+        System.out.println("=== Chapter 4: Loops ===");
+        for (int i = 0; i < 5; i++) { // Simple for loop 
+            System.out.println("Loop iteration: " + i);
+        }
+        
+        String[] fruits = {"Apple", "Banana", "Cherry"};
+        for (String fruit : fruits) { // Enhanced for loop
+            System.out.println("Fruit: " + fruit);
+        }
+        int[] numbers = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for (int number : numbers) { // for loop with sum
+            sum += number;
+        }
+        System.out.println("Sum of numbers: " + sum);
+
+        int userAge = 10;
+        while (userAge < 18) { // While loop
+            System.out.println("User is under 18, current age: " + userAge);
+            userAge++;
+        }
+
+        do {
+            System.out.println("User is still under 21 he can't drink alcohol, \ncurrent age: " + userAge);
+            userAge++;
+        } while (userAge < 21); // Do-while loop
+  
     }
 }
