@@ -110,6 +110,40 @@ public class Main {
         int[] numbersArray = { 1, 2, 3, 4, 5 };
         int sumOfArray = Math.sumArray(numbersArray); // Using the sumArray function from Math class
         Console.info("Sum of array: " + sumOfArray);
+
+        // Chapter 6: Objects
+        System.out.println("=== Chapter 6: Objects ===");
+        
+        Player player1 = new Player("Player 1", 100.0, 20.0);
+        Console.info(player1.getName() + " stats:"
+                + "\nHealth: " + player1.getHealth()
+                + "\nAttack Power: " + player1.getAttackPower());
+
+        Player player2 = new Player("Player 2", 120.0, 25.0);
+        Console.info(player2.getName() + " stats:"
+                + "\nHealth: " + player2.getHealth()
+                + "\nAttack Power: " + player2.getAttackPower());
+        Console.info("Both players are ready for battle!");
+        // Simulating a battle
+        while (player1.getHealth() > 0 && player2.getHealth() > 0) {
+            Console.info(player1.getName() + " attacks " + player2.getName());
+            player2.setHealth(player2.getHealth() - player1.getAttackPower());
+            Console.info(player2.getName() + " health: " + player2.getHealth());
+
+            if (player2.getHealth() <= 0) {
+                Console.success(player2.getName() + " has been defeated!");
+                break;
+            }
+
+            Console.info(player2.getName() + " attacks " + player1.getName());
+            player1.setHealth(player1.getHealth() - player2.getAttackPower());
+            Console.info(player1.getName() + " health: " + player1.getHealth());
+
+            if (player1.getHealth() <= 0) {
+                Console.success(player1.getName() + " has been defeated!");
+                break;
+            }
+        }
     }
 
 }
