@@ -8,6 +8,11 @@ public class Chapter7 {
         // Taste the apple
         apple.taste();
 
+        if (apple instanceof PeelFruit) {
+            Console.log("This fruit can be peeled.");
+        } else {
+            Console.log("This fruit cannot be peeled.");
+        }
 
         // Create a pineapple object
         Fruit pineapple = new Pineapple();
@@ -15,5 +20,11 @@ public class Chapter7 {
         pineapple.displayInfo();
         // Taste the pineapple
         pineapple.taste();
+        
+        if (pineapple instanceof PeelFruit) {
+            Console.log("This fruit can be peeled.");
+        } else {
+            Console.log("This fruit cannot be peeled.");
+        }
     }
 }
