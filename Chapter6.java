@@ -14,6 +14,7 @@ public class Chapter6 {
         
         // Start the battle
         BattleSimulator.simulateBattle(player1, player2);
+        Console.info("");
     }
     
     private static void displayPlayerStats(Player player) {

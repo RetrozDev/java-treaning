@@ -13,6 +13,7 @@ public class Main {
         Chapter4.run();
         Chapter5.run();
         Chapter6.run();
+        Chapter7.run();
         
         Console.success("All chapters completed successfully!");
     }
