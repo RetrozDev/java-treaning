@@ -6,14 +6,15 @@ public class Main {
         Console.info("");
         
         // Run all chapters in sequence
-        Chapter0.run();
-        Chapter1.run();
-        Chapter2.run();
-        Chapter3.run();
-        Chapter4.run();
-        Chapter5.run();
-        Chapter6.run();
-        Chapter7.run();
+        Chapter0.run(); // Introduction
+        Chapter1.run(); // Variables and Data Types
+        Chapter2.run(); // Conditional Statements
+        Chapter3.run(); // Arrays
+        Chapter4.run(); // Loops
+        Chapter5.run(); // Functions
+        Chapter6.run(); // Objects
+        Chapter7.run(); // Inheritance
+        Chapter8.run(); // Enum
         
         Console.success("All chapters completed successfully!");
     }
