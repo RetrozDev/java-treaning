@@ -1,20 +1,24 @@
-
 public class Main {
 
     public static void main(String[] args) {
         // Chapter 0: Introduction
-        System.out.println("Hello, World! This is a Java program. \n\n");
+        System.out.println("=== Chapter 0: Introduction ===");
+        System.out.println("Hello, World! This is a Java program.");
+        System.out.println();
 
         // Chapter 1: Variables and Data Types
+        System.out.println("=== Chapter 1: Variables and Data Types ===");
         byte myAge = 25;
         int myAgeInMonths = 25 * 12;
         String myName = "John Doe";
         System.out.println("My name is " + myName + " and I am " + myAge + " years old. In months, that's "
-                + myAgeInMonths + " months.\n\n");
+                + myAgeInMonths + " months.");
         myAge += 5; // Incrementing age by 5 years
         System.out.println("After 5 years, I will be " + myAge);
+        System.out.println();
 
         // Chatper 2 : Conditional Statements
+        System.out.println("=== Chapter 2: Conditional Statements ===");
         int money = 2000;
         int phonePrice = 1500;
         if (money >= phonePrice) {
@@ -36,5 +40,31 @@ public class Main {
             case 7 -> System.out.println("It's Sunday.");
             default -> System.out.println("Invalid day.");
         }
+        System.out.println();
+
+        // Chapter 3: Arrays
+        System.out.println("=== Chapter 3: Arrays ===");
+        String[] names = {"Alice", "Bob", "Charlie"};
+        System.out.println(names[0]); // Expecting "Alice"
+        names[1] = "David"; // Changing Bob to David
+
+        int[] notes = {85, 90, 78, 92};
+        int  averageNote = (notes[0] + notes[1] + notes[2] + notes[3]) / notes.length;
+        System.out.println("The average note is: " + averageNote);
+
+        int[][] studentsNotes = {
+            {52, 85, 90},
+            {68, 78, 92},
+            {79, 88, 84}
+        };
+        System.out.println("Student 1's first note: " + studentsNotes[0][0]);
+        System.out.println("Student 2's first note: " + studentsNotes[1][0]);
+        System.out.println("Student 3's first note: " + studentsNotes[2][0]);
+
+        String userNames = "user123,user456,user789";
+        String[] userNamesArray = userNames.split(",");
+        System.out.println(userNamesArray[0]); // Expecting "user123"
+        System.out.println(userNamesArray[1]); // Expecting "user456"
+        System.out.println();
     }
 }
