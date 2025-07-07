@@ -30,7 +30,7 @@ public class Main {
         money -= phonePrice; // Deducting phone price from money
         System.out.println("After buying the phone, I have " + money + " left.");
         int day = 3; // Let's say it's Wednesday
-        switch(day) {
+        switch (day) {
             case 1 -> System.out.println("It's Monday.");
             case 2 -> System.out.println("It's Tuesday.");
             case 3 -> System.out.println("It's Wednesday.");
@@ -44,18 +44,18 @@ public class Main {
 
         // Chapter 3: Arrays
         System.out.println("=== Chapter 3: Arrays ===");
-        String[] names = {"Alice", "Bob", "Charlie"};
+        String[] names = { "Alice", "Bob", "Charlie" };
         System.out.println(names[0]); // Expecting "Alice"
         names[1] = "David"; // Changing Bob to David
 
-        int[] notes = {85, 90, 78, 92};
-        int  averageNote = (notes[0] + notes[1] + notes[2] + notes[3]) / notes.length;
+        int[] notes = { 85, 90, 78, 92 };
+        int averageNote = (notes[0] + notes[1] + notes[2] + notes[3]) / notes.length;
         System.out.println("The average note is: " + averageNote);
 
         int[][] studentsNotes = {
-            {52, 85, 90},
-            {68, 78, 92},
-            {79, 88, 84}
+                { 52, 85, 90 },
+                { 68, 78, 92 },
+                { 79, 88, 84 }
         };
         System.out.println("Student 1's first note: " + studentsNotes[0][0]);
         System.out.println("Student 2's first note: " + studentsNotes[1][0]);
@@ -69,15 +69,15 @@ public class Main {
 
         // Chapter 4: Loops
         System.out.println("=== Chapter 4: Loops ===");
-        for (int i = 0; i < 5; i++) { // Simple for loop 
+        for (int i = 0; i < 5; i++) { // Simple for loop
             System.out.println("Loop iteration: " + i);
         }
-        
-        String[] fruits = {"Apple", "Banana", "Cherry"};
+
+        String[] fruits = { "Apple", "Banana", "Cherry" };
         for (String fruit : fruits) { // Enhanced for loop
             System.out.println("Fruit: " + fruit);
         }
-        int[] numbers = {1, 2, 3, 4, 5};
+        int[] numbers = { 1, 2, 3, 4, 5 };
         int sum = 0;
         for (int number : numbers) { // for loop with sum
             sum += number;
@@ -94,6 +94,22 @@ public class Main {
             System.out.println("User is still under 21 he can't drink alcohol, \ncurrent age: " + userAge);
             userAge++;
         } while (userAge < 21); // Do-while loop
-  
+        System.out.println();
+
+        // Chapter 5: Functions
+        System.out.println("=== Chapter 5: Functions ===");
+        int result = Math.add(5, 10); // Using the add function from Math class
+        System.out.println("Sum of 5 and 10 is: " + result);
+        // debug testing
+        Console.log("Operation successful");
+        Console.error("An error has occurred");
+        Console.warn("Be careful with this parameter");
+        Console.info("General information");
+        Console.success("Processing completed successfully");
+
+        int[] numbersArray = { 1, 2, 3, 4, 5 };
+        int sumOfArray = Math.sumArray(numbersArray); // Using the sumArray function from Math class
+        Console.info("Sum of array: " + sumOfArray);
     }
+
 }
