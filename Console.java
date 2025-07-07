@@ -2,12 +2,14 @@ public class Console {
     // ANSI Color codes
 
 
-    static PrintColors green = PrintColors.GREEN ;
-    static PrintColors red = PrintColors.RED ;
-    static PrintColors yellow = PrintColors.YELLOW ;
-    static PrintColors blue = PrintColors.BLUE ;
-    static PrintColors white = PrintColors.WHITE ;
-    static PrintColors reset = PrintColors.RESET ;
+    static String green = PrintColors.GREEN.getColorCode();
+    static String red = PrintColors.RED.getColorCode();
+    static String yellow = PrintColors.YELLOW.getColorCode();
+    static String blue = PrintColors.BLUE.getColorCode();
+    static String white = PrintColors.WHITE.getColorCode();
+    static String reset = PrintColors.RESET.getColorCode();
+    
+
 
     public static void log(String message) {
         System.out.println(green + "[LOG]" + reset + " " + white + message + reset);
