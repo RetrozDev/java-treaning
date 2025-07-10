@@ -22,5 +22,6 @@ public class Chapter9 {
         } else {
             Console.warn("Alice is not in the list.");
         }
+        Console.info("");
     }
 }
