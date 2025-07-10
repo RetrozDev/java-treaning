@@ -18,6 +18,7 @@ public class Main {
         Chapter9.run(); // Arraylist
         Chapter10.run(); // HashMap
         Chapter11.run(); // Exception Handling
+        Chapter12.run(); // Chronometer
         
         Console.success("All chapters completed successfully!");
     }
