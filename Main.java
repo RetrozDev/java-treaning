@@ -20,6 +20,7 @@ public class Main {
         Chapter11.run(); // Exception Handling
         Chapter12.run(); // Chronometer
         Chapter13.run(); // File Operations
+        Chapter14.run(); // Callbacks
         
         Console.success("All chapters completed successfully!");
     }
