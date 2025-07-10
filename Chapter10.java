@@ -37,5 +37,6 @@ public class Chapter10 {
         }
         averageAge = averageAge / ages.size();
         Console.info("Average age: " + averageAge);
+        Console.info("");
     }
 }

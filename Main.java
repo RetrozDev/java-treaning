@@ -17,6 +17,7 @@ public class Main {
         Chapter8.run(); // Enum
         Chapter9.run(); // Arraylist
         Chapter10.run(); // HashMap
+        Chapter11.run(); // Exception Handling
         
         Console.success("All chapters completed successfully!");
     }
